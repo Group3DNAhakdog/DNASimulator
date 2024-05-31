@@ -1,0 +1,62 @@
+{
+	"metadata": {
+		"version": 4.6,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "c2734442-dbd8-4619-b143-19a240b1781b",
+			"type": "CylinderGeometry",
+			"radiusTop": 1,
+			"radiusBottom": 1,
+			"height": 1,
+			"radialSegments": 32,
+			"heightSegments": 1,
+			"openEnded": false,
+			"thetaStart": 0,
+			"thetaLength": 6.283185307179586
+		}],
+	"materials": [
+		{
+			"uuid": "b14b6c60-4204-4d5a-8cef-969c797cdffb",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"envMapRotation": [0,0,0,
+				"XYZ"],
+			"envMapIntensity": 1,
+			"blendColor": 0
+		}],
+	"object": {
+		"uuid": "02f694f6-f7a6-43b5-ab5c-bf769283430a",
+		"type": "Group",
+		"name": "TwoSticks",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"up": [0,1,0],
+		"children": [
+			{
+				"uuid": "f62d3e9c-5648-444c-bb84-4bceb7cd065e",
+				"type": "Mesh",
+				"name": "cylinder1",
+				"layers": 1,
+				"matrix": [2.2204460492503132e-17,0.1,0,0,-3,6.661338147750939e-16,0,0,0,0,0.1,0,0,0,-0.5758791603001459,1],
+				"up": [0,1,0],
+				"geometry": "c2734442-dbd8-4619-b143-19a240b1781b",
+				"material": "b14b6c60-4204-4d5a-8cef-969c797cdffb"
+			},
+			{
+				"uuid": "0f9b49fe-4012-4748-bbf2-287dfe6fccca",
+				"type": "Mesh",
+				"name": "cylinder2",
+				"layers": 1,
+				"matrix": [2.2204460492503132e-17,0.1,0,0,-3,6.661338147750939e-16,0,0,0,0,0.1,0,0,0,0.4140640791280123,1],
+				"up": [0,1,0],
+				"geometry": "c2734442-dbd8-4619-b143-19a240b1781b",
+				"material": "b14b6c60-4204-4d5a-8cef-969c797cdffb"
+			}]
+	}
+}

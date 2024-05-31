@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Simulator</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="CrossAirContainer">
+        <div class="absolute-center">
+        </div>
+    </div> 
+
+    <div class="flex-container">
+        <div class="flexItem" style="width: 30%">
+            <div class="DNAContainer" id="DNAContainerId">
+            </div>
+        </div>
+        <div class="flexItem" style="width: 70%">
+            <div class="DNADescContainer">
+                <div class="headerDNA">DNA</div>
+                DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a person’s body has the same DNA. Most DNA is located in the cell nucleus (where it is called nuclear DNA), but a small amount of DNA can also be found in the mitochondria (where it is called mitochondrial DNA or mtDNA).
+
+                <br/><br/>
+                
+                <div class="flexDNAContainer">
+                    <div class="flexItem flexDNAButton" id="NitrogenousBaseId" onclick="selectTab('NitrogenousBase')">
+                        Nitrogenous Bases
+                    </div>
+                    <div class="flexItem flexDNAButton" id="BasePairingsId" onclick="selectTab('BasePairings')">
+                        Base Pairings
+                    </div>
+                    <div class="flexItem flexDNAButton" id="PentoseSugarId" onclick="selectTab('PentoseSugar')">
+                        Pentose Sugar
+                    </div>
+                    <div class="flexItem flexDNAButton" id="PosphateGroupId" onclick="selectTab('PosphateGroup')">
+                        Posphate Group
+                    </div>
+                    <div class="flexItem flexDNAButton" id="HydrogenBondsId" onclick="selectTab('HydrogenBonds')">
+                        Hydrogen Bonds
+                    </div>
+                    <div class="flexItem flexDNAButton" id="PosphodiesterBondsId" onclick="selectTab('PosphodiesterBonds')">
+                        Posphodiester Bonds
+                    </div>
+                </div>
+
+                <div class="DNAdditionalDescriptionContainer">
+                    Press the molecules or the tab above to learn more about DNA
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="indicator" id="indicatorId" style="display: none;">
+    </div>
+
+    <script src="./files/src/AnimeJs/anime.min.js"></script>
+    <script src="./files/src/ThreeJs/threeJs.js"></script>
+    <script src="./files/src/Pizzicato/Pizzicato.js"></script>
+    <script src="./files/src/dna.js"></script>
+    <Script src="./files/src/webInterface.js"></Script>
+
+    <!--
+        
+    -->
+    
+</body>
+</html>
