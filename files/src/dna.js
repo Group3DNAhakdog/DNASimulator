@@ -15,12 +15,18 @@ var baseCoding = [
 ]
 baseCoding.reverse() 
 
+console.log(baseCoding)
+
+
 var colorCoding = {
-    "A": rgbToHex(0.4, 1, 0.4),     // Purple 
-    "T": rgbToHex(0.6, 0.1, 0.9),   // Green 
-    "G": rgbToHex(0.4, 0.98, 1) ,    // Red 
-    "C": rgbToHex(0.9, 0.1, 0.1)   // Blue
+    "A": rgbToHex(0.4, 1, 0.4),     // Green 
+    "T": rgbToHex(0.6, 0.1, 0.9),   // Purple 
+    "G": rgbToHex(0.4, 0.98, 1) ,   // Blue
+    "C": rgbToHex(0.9, 0.1, 0.1)    // Red 
 }
+
+// Adenine and Guanine (9 carbons)
+// thymine and cytosine (6 carbons)
 
 // Variable things // Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things
 // Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable things// Variable thingsv
@@ -50,8 +56,8 @@ var NitrogenousBases = [];
 var hydrogenBondsAll = []
 var BasePairings = []
 var PentoseSugarGroup = []
-var PosphateGroup = []
-var PosphodiesterGroup = []
+var PhosphateGroup = []
+var PhosphodiesterGroup = []
 var hydrogenBonds = []
 
 var ThymineGroup = []
@@ -228,7 +234,7 @@ function getDNAPairs(DNA, left, right, radius){
             rightBaseConnectors.push(baseConnector)
 
             modifyMolecule(molecules, radius, colorCoding[right])   
-            getPosphateAndSugar(sugar, radius, "right")     
+            getPhosphateAndSugar(sugar, radius, "right")     
         }
 
         // save for left pair
@@ -242,7 +248,7 @@ function getDNAPairs(DNA, left, right, radius){
             leftBaseConnectors.push(baseConnector)
 
             modifyMolecule(molecules, radius, colorCoding[left])
-            getPosphateAndSugar(sugar, radius, "left")
+            getPhosphateAndSugar(sugar, radius, "left")
         }
 
         if (child.name == "HydrogenBond"){
@@ -251,7 +257,7 @@ function getDNAPairs(DNA, left, right, radius){
     })
 }
 
-function getPosphateAndSugar(child, radius, side){
+function getPhosphateAndSugar(child, radius, side){
     var currentSelected = child
 
     currentSelected.children.forEach(function(child) {
@@ -272,8 +278,8 @@ function getPosphateAndSugar(child, radius, side){
 
         // add the pospho parts to the array
         if (child.name == "RightPoshphoGroup" || child.name == "LeftPoshphoGroup"){
-            var posphateGroup = child.children[2]
-            var moleculeContainer = posphateGroup.children[3]
+            var phosphateGroup = child.children[2]
+            var moleculeContainer = phosphateGroup.children[3]
 
             if (side == "left"){
                 leftPoshphoMolecule.push(moleculeContainer)
@@ -286,10 +292,10 @@ function getPosphateAndSugar(child, radius, side){
     })
 }
 
-function getPosphodiester(theStrand){
+function getPhosphodiester(theStrand){
     theStrand.traverse(function(child) {
         if (child.name.includes("_PB")){
-            PosphodiesterGroup.push(child)
+            PhosphodiesterGroup.push(child)
         }
     })
 }
@@ -318,8 +324,8 @@ function generateStrands(strand, amounts){
         //modify the strand
         getDNAPairs(individualPiece, baseCoding[i][0], baseCoding[i][1], moleculeSize)
 
-        // get the posphodiester parts
-        getPosphodiester(individualPiece)
+        // get the phosphodiester parts
+        getPhosphodiester(individualPiece)
 
         // then add
         strandModel.add(individualPiece)
@@ -384,12 +390,12 @@ function generateStrands(strand, amounts){
         rightBaseMoleculeCopy.forEach(function(child) {
             NitrogenousBases.push(child)
             BasePairings.push(child)
-            assignATCG(child, baseCoding[i][0])
+            assignATCG(child, baseCoding[i][1])
         })
         leftBasesMoleculeCopy.forEach(function(child) {
             NitrogenousBases.push(child)
             BasePairings.push(child)
-            assignATCG(child, baseCoding[i][1])
+            assignATCG(child, baseCoding[i][0])
         })
         hydrogenBondCopy.forEach(function(child){
             child.name = "HydrogenBond"
@@ -397,12 +403,12 @@ function generateStrands(strand, amounts){
             BasePairings.push(child)
         })
 
-        // and for the posphate and pentose group as well
+        // and for the phosphate and pentose group as well
         leftPoshphoMolecule[i].children.forEach(function(child){
-            PosphateGroup.push(child)
+            PhosphateGroup.push(child)
         })
         rightPoshphoMolecule[i].children.forEach(function(child){
-            PosphateGroup.push(child)
+            PhosphateGroup.push(child)
         })
         leftSugarMolecule[i].children.forEach(function(child){
             PentoseSugarGroup.push(child)
@@ -508,7 +514,7 @@ function animateGroupedBoop(groupContainer){
         child.material.transparent = true
         child.material.opacity = 1
 
-        if (child.name != "HydrogenBond" && child.name !="PosphateBond_PB"){
+        if (child.name != "HydrogenBond" && child.name !="PhosphateBond_PB"){
             bobAnimation(child, 5, false)
             //console.log("Name", groupContainer.name)
         } else {
@@ -674,13 +680,13 @@ function onMouseClick(event) {
 
             case "rightPospho":
                 animateBoop(leftPoshphoMolecule[selectedMolecule[3]])
-                selectTabMolecules("PosphateGroup")
+                selectTabMolecules("PhosphateGroup")
                 alreadyHitSomething = true
             break; 
 
             case "leftPospho":
                 animateBoop(rightPoshphoMolecule[selectedMolecule[3]])
-                selectTabMolecules("PosphateGroup")
+                selectTabMolecules("PhosphateGroup")
                 alreadyHitSomething = true
             break; 
 
@@ -711,8 +717,8 @@ function animate() {
 
     // Rotate the cube
     if (canNowTurn){
-        DNA.rotation.y += 0.005;
-        rotateText(-0.005)
+        //DNA.rotation.y += 0.005;
+        //rotateText(-0.005)
     }
 
     // Render the scene
