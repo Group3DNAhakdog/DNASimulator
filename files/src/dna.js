@@ -717,8 +717,8 @@ function animate() {
 
     // Rotate the cube
     if (canNowTurn){
-        //DNA.rotation.y += 0.005;
-        //rotateText(-0.005)
+        DNA.rotation.y += 0.005;
+        rotateText(-0.005)
     }
 
     // Render the scene
