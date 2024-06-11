@@ -44,7 +44,14 @@ canvas {
     background: #939393; /* Color of the track */
 }
 
-/* CSS for desc */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc */
+/* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc */
+/* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc *//* CSS for desc */
 
 .DNADescContainer{
     width: 90%;
@@ -80,6 +87,13 @@ canvas {
     cursor: pointer;
 }
 
+.flexItemTab{
+    text-align: left;
+    height: 100%;
+    font-size: 1vw;
+    flex: 0 2 auto;
+}
+
 .DNAMenuSelected{
     background-color: #64882b;
 }
@@ -95,23 +109,86 @@ canvas {
     padding: 20px; /* Example padding */
 
     overflow-y: scroll;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .NitrogenousBaseHeader{
     user-select: none;
     cursor: pointer;
     font-size: 2vw;
-    width: 5vw;
+
 }
 
 .DescriptionHeader{
     user-select: none;
-    cursor: pointer;
     font-size: 2vw;
-    width: 20vw;
 }
 
-/* Custom CSS */
+.imageDescription{
+    max-width: 30vw;
+    max-height: 20vw;
+    display: inline-block;
+}
+
+.imageDescriptionFloatLeft{
+    max-width: 20vw;
+    max-height: 20vw;
+    float: left; 
+    margin-right: 1vw;
+}
+
+.copyright{
+    margin-top: 0.5vw;
+    font-size: 0.8vw;
+    text-align: left;
+}
+
+/* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles */
+/* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles */
+/* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles *//* Reference Styles */
+
+.referenceDiv{
+    margin-top: 1vw;
+    margin-left: 5vw;
+    text-align: left;
+}
+
+.referenceMiniHeader{
+    font-weight: 800;
+}
+
+/* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container */
+/* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container */
+/* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container *//* Picture Container */
+
+.frameContainer{
+    width: 15vw;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+
+    border-color: #464646;
+    border-width: 0.1vw;
+    border-style: solid;
+}
+
+.framePictureContainer{
+    background-color: #323232;
+    width: 15vw;
+    height: 15vw
+}
+
+.flexFrame{
+    background-color: #000000;
+    height: 100%;
+    width: 50%;
+}
+
+/* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS */
+/* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS */
+/* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS *//* Custom CSS */
+
 
 .websiteContainer{
     position: absolute;
@@ -133,6 +210,7 @@ canvas {
     color: #ffffff;
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85vw;
 }
 
 .CrossAirContainer {

@@ -21,23 +21,26 @@
                 <br/><br/>
                 
                 <div class="flexDNAContainer">
-                    <div class="flexItem flexDNAButton" id="NitrogenousBaseId" onclick="selectTab('NitrogenousBase')">
+                    <div class="flexItemTab flexDNAButton" id="NitrogenousBaseId" onclick="selectTab('NitrogenousBase')">
                         Nitrogenous Bases
                     </div>
-                    <div class="flexItem flexDNAButton" id="BasePairingsId" onclick="selectTab('BasePairings')">
+                    <div class="flexItemTab flexDNAButton" id="BasePairingsId" onclick="selectTab('BasePairings')">
                         Base Pairings
                     </div>
-                    <div class="flexItem flexDNAButton" id="PentoseSugarId" onclick="selectTab('PentoseSugar')">
+                    <div class="flexItemTab flexDNAButton" id="PentoseSugarId" onclick="selectTab('PentoseSugar')">
                         Pentose Sugar
                     </div>
-                    <div class="flexItem flexDNAButton" id="PhosphateGroupId" onclick="selectTab('PhosphateGroup')">
+                    <div class="flexItemTab flexDNAButton" id="PhosphateGroupId" onclick="selectTab('PhosphateGroup')">
                         Phosphate Group
                     </div>
-                    <div class="flexItem flexDNAButton" id="HydrogenBondsId" onclick="selectTab('HydrogenBonds')">
+                    <div class="flexItemTab flexDNAButton" id="HydrogenBondsId" onclick="selectTab('HydrogenBonds')">
                         Hydrogen Bonds
                     </div>
-                    <div class="flexItem flexDNAButton" id="PhosphodiesterBondsId" onclick="selectTab('PhosphodiesterBonds')">
+                    <div class="flexItemTab flexDNAButton" id="PhosphodiesterBondsId" onclick="selectTab('PhosphodiesterBonds')">
                         Phosphodiester Bonds
+                    </div>
+                    <div class="flexItemTab flexDNAButton" id="ReferencesAcknowledgementId" onclick="selectTab('ReferencesAcknowledgement')">
+                        References and Acknowledgement
                     </div>
                 </div>
 
@@ -45,12 +48,18 @@
                     Press the molecules or the tab above to learn more about DNA
                 </div>
 
-                
+                <div class="copyright">
+                    This project and its content are protected by copyright law. Unauthorized reproduction, distribution, or use of any part of this document is strictly prohibited. 
+                    Any unauthorized use may result in legal action.
+                    © [2024] [Group 3 DNA 3D MODEL]. All rights reserved.     
+                </div>
+ 
             </div>
         </div>
     </div>
 
-    <div class="indicator" id="indicatorId" style="display: none;">
+    <div class="indicator" id="indicatorId">
+  
     </div>
 
     <script src="./files/src/AnimeJs/anime.min.js"></script>
