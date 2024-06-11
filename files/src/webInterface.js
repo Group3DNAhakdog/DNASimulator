@@ -138,7 +138,7 @@ var ReferencesDescription = `
 
     <br/>
     <div class="referenceMiniHeader">
-        Phosphodiester Bond
+         Phosphate Group
     </div>
     <div class="referenceDiv">
         2.5.4: DNA and RNA. (2022, July 19). Biology LibreTexts. https://bio.libretexts.org/Courses/Prince_Georges_Community_College/PGCC_Microbiology/02%3A_Chemistry_of_Microbiology/2.05%3A_Organic_Compounds/2.5.04%3A_DNA_and_RNA?fbclid=IwZXh0bgNhZW0CMTAAAR02SZEgh19yp6K-zopzhP6vAOx50LrMMihU0VSbXI-aquhvnZh3UTGF7VI_aem_AVrnadZuMjLPyLDl30PAHmZFuKeaHYSzcn6Wezag1QfJDsxfijza2vpE2o5gH0HySy788FeAiD_3V1BV_b4xm_rC
